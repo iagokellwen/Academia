@@ -32,7 +32,7 @@
             this.lb_nomeUsuario = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lb_acesso = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lb_acess = new System.Windows.Forms.Label();
             this.pb_ledLogado = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_ledLogado)).BeginInit();
@@ -44,18 +44,18 @@
             this.panel1.Controls.Add(this.lb_nomeUsuario);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.lb_acesso);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lb_acess);
             this.panel1.Controls.Add(this.pb_ledLogado);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 329);
+            this.panel1.Location = new System.Drawing.Point(0, 358);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(651, 32);
+            this.panel1.Size = new System.Drawing.Size(687, 32);
             this.panel1.TabIndex = 0;
             // 
             // lb_nomeUsuario
             // 
             this.lb_nomeUsuario.AutoSize = true;
-            this.lb_nomeUsuario.Location = new System.Drawing.Point(194, 8);
+            this.lb_nomeUsuario.Location = new System.Drawing.Point(165, 8);
             this.lb_nomeUsuario.Name = "lb_nomeUsuario";
             this.lb_nomeUsuario.Size = new System.Drawing.Size(22, 15);
             this.lb_nomeUsuario.TabIndex = 4;
@@ -64,7 +64,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(138, 8);
+            this.label2.Location = new System.Drawing.Point(109, 8);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 15);
             this.label2.TabIndex = 3;
@@ -78,15 +78,16 @@
             this.lb_acesso.Size = new System.Drawing.Size(13, 15);
             this.lb_acesso.TabIndex = 2;
             this.lb_acesso.Text = "0";
+            this.lb_acesso.Click += new System.EventHandler(this.lb_acesso_Click);
             // 
-            // label1
+            // lb_acess
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(37, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 15);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Acesso:";
+            this.lb_acess.AutoSize = true;
+            this.lb_acess.Location = new System.Drawing.Point(36, 8);
+            this.lb_acess.Name = "lb_acess";
+            this.lb_acess.Size = new System.Drawing.Size(47, 15);
+            this.lb_acess.TabIndex = 1;
+            this.lb_acess.Text = "Acesso:";
             // 
             // pb_ledLogado
             // 
@@ -102,7 +103,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(651, 361);
+            this.ClientSize = new System.Drawing.Size(687, 390);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -117,10 +118,10 @@
         #endregion
 
         private Panel panel1;
-        private Label lb_nomeUsuario;
         private Label label2;
-        private Label lb_acesso;
-        private Label label1;
+        private Label lb_acess;
         public PictureBox pb_ledLogado;
+        public Label lb_nomeUsuario;
+        public Label lb_acesso;
     }
 }

@@ -8,16 +8,60 @@ using System.Data.SQLite;
 
 namespace Academia
 {
-    internal class Banco
+     class Banco
     {
         private static SQLiteConnection conexao;
 
         private static SQLiteConnection ConexaoBanco()
         {
-            conexao = new SQLiteConnection("Data source = D:\\C#\\Parte 2\\Academia\\Academia\\banco\\bd_academia");
+            conexao = new SQLiteConnection("Data source =D:\\C#\\Parte 2\\Academia\\Academia\\banco\\bd_academia.db");
             conexao.Open();
-
             return conexao;
+        }
+
+        public static DataTable obterTodosUsuarios()
+        {
+            SQLiteDataAdapter da = null;
+            DataTable dt = new DataTable();
+            try
+            {
+                using (var cmd = ConexaoBanco().CreateCommand())
+                {
+                    cmd.CommandText = "SELECT * FROM tb_usuario";
+                    da = new SQLiteDataAdapter(cmd.CommandText, ConexaoBanco());
+                    da.Fill(dt);
+                    ConexaoBanco().Close();
+                    return dt;
+                }
+
+            }catch(Exception ex)
+            {
+                ConexaoBanco().Close();
+                throw ex;
+            }
+        }
+
+        public static DataTable consulta(string sql)
+        {
+            SQLiteDataAdapter da = null;
+            DataTable dt = new DataTable();
+            try
+            {
+                using (var cmd = ConexaoBanco().CreateCommand())
+                {
+                    cmd.CommandText =sql;
+                    da = new SQLiteDataAdapter(cmd.CommandText, ConexaoBanco());
+                    da.Fill(dt);
+                    ConexaoBanco().Close();
+                    return dt;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                ConexaoBanco().Close();
+                throw ex;
+            }
         }
 
         
