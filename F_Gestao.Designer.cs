@@ -211,6 +211,7 @@
             this.btn_fecharJanela.TabIndex = 3;
             this.btn_fecharJanela.Text = "Fechar janela";
             this.btn_fecharJanela.UseVisualStyleBackColor = true;
+            this.btn_fecharJanela.Click += new System.EventHandler(this.btn_fecharJanela_Click);
             // 
             // btn_excluirUsurario
             // 
@@ -221,6 +222,7 @@
             this.btn_excluirUsurario.TabIndex = 2;
             this.btn_excluirUsurario.Text = "Excluir usuário";
             this.btn_excluirUsurario.UseVisualStyleBackColor = true;
+            this.btn_excluirUsurario.Click += new System.EventHandler(this.btn_excluirUsurario_Click);
             // 
             // btn_salvar
             // 
@@ -231,6 +233,7 @@
             this.btn_salvar.TabIndex = 1;
             this.btn_salvar.Text = "Salvar alterações\r\n";
             this.btn_salvar.UseVisualStyleBackColor = true;
+            this.btn_salvar.Click += new System.EventHandler(this.btn_salvar_Click);
             // 
             // btn_novoUsuario
             // 
@@ -241,6 +244,7 @@
             this.btn_novoUsuario.TabIndex = 0;
             this.btn_novoUsuario.Text = "Novo usuário";
             this.btn_novoUsuario.UseVisualStyleBackColor = true;
+            this.btn_novoUsuario.Click += new System.EventHandler(this.btn_novoUsuario_Click);
             // 
             // dgv_usuarios
             // 

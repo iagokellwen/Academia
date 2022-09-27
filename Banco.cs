@@ -146,6 +146,53 @@ namespace Academia
 
         //FIM - funcões do FORM F_NovoUsuario
 
+        public static void AtualizarUsuarios(Usuario u)
+        {
+            SQLiteDataAdapter da = null;
+            DataTable dt = new DataTable();
+            try
+            {
+                var vcon = ConexaoBanco();
+                var cmd = ConexaoBanco().CreateCommand();
+
+                cmd.CommandText = "UPDATE tb_usuario SET T_NOMEUSUARIO='" + u.Name + "',T_USERNAME='" + u.username + "', T_SENHAUSUARIO='" + u.password + "', T_STATUSUSUARIO='" + u.status + "', N_NIVELUSUARIO=" + u.nivel + " WHERE ID_USUARIO=" + u.Id;
+                da = new SQLiteDataAdapter(cmd.CommandText, vcon);
+                da.Fill(dt);
+                cmd.ExecuteNonQuery();
+                vcon.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public static void DeletarUsuario(string id)
+        {
+            SQLiteDataAdapter da = null;
+            DataTable dt = new DataTable();
+            try
+            {
+                var vcon = ConexaoBanco();
+                var cmd = ConexaoBanco().CreateCommand();
+
+                cmd.CommandText = "DELETE FROM tb_usuario WHERE ID_USUARIO=" + id;
+                da = new SQLiteDataAdapter(cmd.CommandText, vcon);
+                da.Fill(dt);
+                cmd.ExecuteNonQuery();
+                vcon.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
         // Rotinas gerais
         public static bool existeUsername(Usuario u)
         {
