@@ -32,3 +32,5 @@ D:\C#\Parte 2\Academia\Academia\obj\Debug\net6.0-windows\Academia.genruntimeconf
 D:\C#\Parte 2\Academia\Academia\obj\Debug\net6.0-windows\ref\Academia.dll
 D:\C#\Parte 2\Academia\Academia\obj\Debug\net6.0-windows\Academia.Properties.Resources.resources
 D:\C#\Parte 2\Academia\Academia\obj\Debug\net6.0-windows\Academia.F_login.resources
+D:\C#\Parte 2\Academia\Academia\obj\Debug\net6.0-windows\Academia.F_NovoUsuario.resources
+D:\C#\Parte 2\Academia\Academia\obj\Debug\net6.0-windows\Academia.F_GestaoUsuarios.resources
